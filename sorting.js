@@ -1,4 +1,11 @@
+function swap(ele1 , ele2)
+{
+    console.log("In swap()") ;
 
+    let temp = ele1.style.height ;
+    ele1.style.height = ele2.style.height ;
+    ele2.style.height = temp ;
+}
 
 
 function disableSortingBtn(){
@@ -33,6 +40,12 @@ function enableNewArrayBtn(){
     document.querySelector(".newArray").disabled = false;
 }
 
+function waitforme(milisec) { 
+    return new Promise(resolve => { 
+        setTimeout(() => { resolve('') }, milisec); 
+    }) 
+}
+
 let arraySize = document.querySelector('#arr_sz');
 
 arraySize.addEventListener('input' , function(){
@@ -47,7 +60,7 @@ let delayElement = document.querySelector('#speed_input') ;
 
 delayElement.addEventListener('input' , function(){
     // console.log(delayElement.value , typeof(delayElement.value));
-    delay = 320 - parseInt(delayElement.value) ;
+    delay = 260 - parseInt(delayElement.value) ;
 }) ;
 
 let array = [] ;
