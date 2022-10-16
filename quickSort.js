@@ -34,7 +34,6 @@ async function partitionLomuto(ele, l, r){
     ele[r].style.background = 'pink';
     ele[i].style.background = 'green';
 
-    // pauseChamp
     await waitforme(delay);
     
     // color
