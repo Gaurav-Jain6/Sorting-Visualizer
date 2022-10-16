@@ -19,7 +19,7 @@ body {
     background: cyan;
     border: 1pt solid black;
     width: 10px;
-    transition: 0.1s all ease;
+    transition: 0.8s all ease;
 }
 
 .row{
