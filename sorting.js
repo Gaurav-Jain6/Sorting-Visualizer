@@ -1,3 +1,6 @@
+let min = 1 ;
+let max = 500 ;
+
 function swap(ele1 , ele2)
 {
     console.log("In swap()") ;
@@ -54,26 +57,26 @@ arraySize.addEventListener('input' , function(){
     createNewArray(parseInt(arraySize.value)) ;
 }) ;
 
-let delay = 260 ;
+let delay = 1000 ;
 
 let delayElement = document.querySelector('#speed_input') ;
 
 delayElement.addEventListener('input' , function(){
     // console.log(delayElement.value , typeof(delayElement.value));
-    delay = 260 - parseInt(delayElement.value) ;
+    delay = delay - parseInt(delayElement.value) ;
 }) ;
 
 let array = [] ;
 
 createNewArray() ;
 
-function createNewArray(noOfBars = 60)
+function createNewArray(noOfBars = 100)
 {
     deleteChild() ;
     array = [] ;
     for(let i = 0 ; i < noOfBars ; i++)
     {
-        array.push(Math.floor(Math.random() * 250) + 1) ;
+        array.push(Math.floor(Math.random() * 250) + 1) ;   
     }
     // console.log(array) ;
 
