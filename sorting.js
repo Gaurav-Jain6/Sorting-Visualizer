@@ -63,7 +63,7 @@ let delayElement = document.querySelector('#speed_input') ;
 
 delayElement.addEventListener('input' , function(){
     // console.log(delayElement.value , typeof(delayElement.value));
-    delay = delay - parseInt(delayElement.value) ;
+    delay = 1000 - parseInt(delayElement.value) ;
 }) ;
 
 let array = [] ;
