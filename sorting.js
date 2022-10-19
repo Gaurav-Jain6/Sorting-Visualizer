@@ -108,3 +108,40 @@ newArray.addEventListener("click" , function(){
 
     createNewArray(arraySize.value);
 }) ;
+
+function disableSameArrayBtn(){
+    document.querySelector(".sameArray").disabled = true;
+}
+
+function enableSameArrayBtn(){
+    document.querySelector(".sameArray").disabled = false;
+}
+
+let copyArr = array ;
+let sameArray = document.querySelector(".sameArray") ;
+sameArray.addEventListener("click" , function(){
+    enableSortingBtn() ;
+    enableSizeSlider() ;
+
+    createSameArray(array.length) ;
+
+}) ;
+
+
+createSameArray() ;
+function createSameArray(noOfBars = array.length)
+{
+    deleteChild() ;
+    console.log(array) ;
+
+    const bars = document.querySelector("#bars");
+    for(let i = 0 ; i < array.length ; i++)
+    {
+        const bar = document.createElement("div") ;
+        bar.style.height = `${array[i]*2}px` ;
+        bar.classList.add('bar') ;
+        bar.classList.add('flex-item') ;
+        bar.classList.add(`barNo${i}`);
+        bars.appendChild(bar);
+    }
+}
